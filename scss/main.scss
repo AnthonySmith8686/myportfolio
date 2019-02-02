@@ -1,4 +1,5 @@
 @import 'config';
+@import 'menu';
 
 * {
     box-sizing: border-box;
@@ -17,8 +18,9 @@ body {
 //Headings
 
 h1, h2, h3 {
-    margin: 0; 
+    margin: 0;
     font-weight: 400;
+    text-shadow: 3px 2px #444;
 
     &.lg-heading {
         font-size: 6rem;
@@ -52,7 +54,7 @@ main {
 
     .icons {
         margin-top: 1 rem;
-        
+
         a {
             padding: 0.4rem;
 
@@ -70,4 +72,3 @@ main {
         }
     }
 }
-
