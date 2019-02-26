@@ -57,9 +57,9 @@
       background: url(../img/portrait.jpg);
       background-size: contain;
       border-radius: 50%;
-      border: solid 3px #8fb9c7; }
+      border: solid 3px #7fb0c0; }
   .menu .nav-item.current > a {
-    color: #8fb9c7; }
+    color: #7fb0c0; }
   .menu .nav-link {
     display: inline-block;
     position: relative;
@@ -71,7 +71,7 @@
     text-decoration: none;
     transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
-      color: #8fb9c7; }
+      color: #7fb0c0; }
 
 * {
   box-sizing: border-box; }
@@ -114,14 +114,13 @@ body {
 
 h1, h2, h3 {
   margin: 0;
-  font-weight: 400;
-  text-shadow: 1px 1px #2b4d6d; }
+  font-weight: 400; }
   h1.lg-heading, h2.lg-heading, h3.lg-heading {
     font-size: 6rem; }
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(150, 189, 202, 0.8); }
+    background: rgba(134, 180, 195, 0.8); }
 
 a {
   color: #fff;
@@ -133,17 +132,17 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #8fb9c7; }
+  color: #7fb0c0; }
 
 main {
-  padding: 4rem;
+  padding: 2.5rem 4rem;
   min-height: calc(100vh - 60px); }
   main .icons {
-    margin-top: 1 rem; }
+    margin-top: 1rem; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #8fb9c7;
+        color: #7fb0c0;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
@@ -153,20 +152,17 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-areas: 'bioimage job1 job2';
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10vh; }
 
 .bio-image {
   grid-area: bioimage;
   margin: auto;
   border-radius: 50%;
-  border: #8fb9c7 3px solid;
+  border: #7fb0c0 3px solid;
   width: 300px;
   height: 300px; }
-
-.bio {
-  grid-area: bio;
-  font-size: 1.2rem; }
 
 .job-1 {
   grid-area: job1; }
@@ -174,20 +170,64 @@ main {
 .job-2 {
   grid-area: job2; }
 
-.job-3 {
-  grid-area: job3; }
-
 .bio, .job {
-  background: #7e8d9b;
+  background: rgba(118, 140, 148, 0.9);
   padding: 0.5rem;
-  border-bottom: #8fb9c7 5px solid; }
+  border-bottom: #7fb0c0 5px solid; }
+
+.projects {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr); }
+  .projects h3, .projects .btn-dark, .projects .btn-light {
+    background-color: rgba(134, 180, 195, 0.8);
+    padding: 0.2rem 0.5rem; }
+  .projects img {
+    width: 100%;
+    height: 200px;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.8;
+      color: #444;
+      border-color: #7fb0c0;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: inline-block;
+  padding: 0.5rem, 1rem;
+  border: 0;
+  margin-bottom: 2rem; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 1.2rem;
+    color: #fff !important;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 1rem;
+    background-color: rgba(118, 140, 148, 0.9); }
+  .boxes span {
+    color: #fff; }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: #5a6773;
+  background: #5a6c73;
   color: set-text-color(#444);
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -215,12 +255,18 @@ main {
     width: 160px !important;
     height: 160px !important; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; } }
+    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3'; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   h2, h3 {
     font-size: 1.2rem; }
   main#home h1 {
     margin-top: 10vh;
-    font-size: 5rem; } }
+    font-size: 5rem; }
+  main#about h1, main#work h1, main#contact h1 {
+    margin-top: 5vh;
+    font-size: 5rem; }
+  .projects {
+    grid-template-columns: 1fr; } }
