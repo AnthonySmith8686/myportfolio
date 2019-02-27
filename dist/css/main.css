@@ -54,7 +54,7 @@
     .menu-branding .portrait {
       width: 250px;
       height: 250px;
-      background: url(../img/portrait.jpg);
+      background: url(../img/lakeface.jpg);
       background-size: contain;
       border-radius: 50%;
       border: solid 3px #7fb0c0; }
@@ -111,6 +111,9 @@ body {
       height: 100%;
       z-index: -1;
       background: rgba(68, 68, 68, 0.1); }
+
+p {
+  text-align: justify; }
 
 h1, h2, h3 {
   margin: 0;
